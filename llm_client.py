@@ -45,7 +45,7 @@ async def call_llm(messages: list) -> str:
                 OPENROUTER_BASE_URL,
                 headers=headers,
                 json=payload,
-                timeout=30.0,
+                timeout=15.0,
             )
 
             if response.status_code != 200:

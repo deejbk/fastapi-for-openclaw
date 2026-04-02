@@ -9,6 +9,11 @@ logger = logging.getLogger(__name__)
 app = FastAPI()
 
 
+@app.get("/health")
+async def health():
+    return {"status": "ok"}
+
+
 @app.get("/")
 async def root():
     return {"greeting": "Hello, World!", "message": "Welcome to FastAPI!"}
